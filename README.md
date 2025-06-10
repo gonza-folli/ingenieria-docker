@@ -1,6 +1,6 @@
-# **Proyecto Web Dockerizado: `Trabajo-Ingenieria`**
+# **Proyecto Web Dockerizado: `Ingenieria-Docker`**
 
-Este repo contiene una web estática (HTML y CSS) dockerizado utilizando la imágen de **Nginx**. El proceso para construir y ejecutar el contenedor Docker es el siguiente.
+Este repo contiene el código de una sencilla página web estática (HTML y CSS) y ha sido dockerizado utilizando la imágen de **Nginx**. El proceso para construir y ejecutar el contenedor Docker es el siguiente.
 
 ---
 
@@ -26,6 +26,26 @@ ingenieria-docker/
 ├── index.html          # Página principal
 └── Dockerfile          # Configuración de Docker
 ```
+
+## **🐳 Explicación del Dockerfile**
+El archivo `Dockerfile` contiene las siguientes instrucciones:
+
+```dockerfile
+FROM nginx:alpine
+
+COPY . /usr/share/nginx/html
+```
+
+### **¿Qué hace cada línea?**
+1. **`FROM nginx:alpine`**  
+   - Utiliza la imagen oficial de Nginx basada en Alpine Linux.
+   - Esta imagen ya incluye un servidor web Nginx configurado para servir archivos estáticos.
+
+2. **`COPY . /usr/share/nginx/html`**  
+   - Copia **todos los archivos locales** (HTML, CSS, etc.) al directorio `/usr/share/nginx/html` dentro del contenedor.
+   - Este es el directorio predeterminado donde Nginx busca los archivos para servir.
+
+---
 
 ### **2. Construir la imagen Docker**
 Desde la raíz del proyecto, ejecuta:
@@ -57,6 +77,11 @@ docker stop web-dockerizada
 
 ## **📌 Notas**
 - Si cambias los archivos locales, se debe volver a ejecutar desde el paso 2 para ver los cambios impactados
- 
+   ```bash
+   docker stop web-dockerizada
+   docker rm web-dockerizada
+   docker run -d -p 8080:80 --name web-dockerizada trabajo-ingenieria
+   ```
+ - La imagen elegida `nginx:alpine` es ligera, ideal para proyectos simples.
 
 ---
