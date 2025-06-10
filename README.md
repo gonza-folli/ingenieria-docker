@@ -20,7 +20,7 @@ cd ingenieria-docker
 ```
 Debería ver la siguiente **estructura**
 ```
-IngenieriaSoftware/
+ingenieria-docker/
 ├── css/
 │   └── styles.css      # Archivos CSS
 ├── index.html          # Página principal
