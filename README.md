@@ -43,7 +43,7 @@ docker run -d -p 8080:80 --name web-dockerizada trabajo-ingenieria
 El -p se ocupa de apuntar el puerto 80 del contenedor al 8080 de la PC. Se puede cambiar el 8080 por el puerto que se desee.
 
 ### **4. Acceder a la aplicación**
-Abre tu navegador y visita:  
+Ingresar a la siguiente URL donde 8080 es el puerto asignado
 🔗 **[http://localhost:8080](http://localhost:8080)**  
 
 Si todo funcionó correctamente, verá la página web levantada. En caso que en el paso anterior se haya modificado el puerto 8080, se deberá cambiarlo también en esta URL.
