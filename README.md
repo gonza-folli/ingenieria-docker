@@ -56,7 +56,7 @@ docker stop web-dockerizada
 ---
 
 ## **📌 Notas**
-- Si cambias los archivos locales, se debe volver a ejecutar desde el paso 2
+- Si cambias los archivos locales, se debe volver a ejecutar desde el paso 2 para ver los cambios impactados
  
 
 ---
